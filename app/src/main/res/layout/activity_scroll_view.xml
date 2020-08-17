@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/nested_scrollview"
+    android:layout_height="match_parent"
+    tools:context=".ui.scroll.view.ScrollViewActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
