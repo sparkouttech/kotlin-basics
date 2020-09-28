@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationgraph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <argument
+            android:name="sendValue"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="sendModel"
+            app:argType="com.example.kotlin.ui.model.User" />
+
+        <action
+            android:id="@+id/action_notificationsFragment_to_notificationDetailsFragment"
+            app:destination="@id/notificationDetailsFragment"
+            app:popUpTo="@id/homeFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_fragment_3_to_addToDoFragment"
+            app:destination="@id/addToDoFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/addToDoFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.AddToDialogFragment"
+        android:label="fragment_add_to_do"
+        tools:layout="@layout/fragment_add_to_dialog" />
+
+    <fragment
+        android:id="@+id/notificationDetailsFragment"
+        android:name="com.example.kotlin.ui.navigationfragments.NotificationDetailsFragment"
+        android:label="Notification Details"
+        tools:layout="@layout/fragment_notification_details" />
+
+
+</navigation>

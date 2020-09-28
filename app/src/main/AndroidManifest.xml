@@ -10,15 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.scroll.view.ScrollViewActivity"></activity>
-        <activity android:name=".ui.seekbar.view.SeekBarActivity" />
-        <activity android:name=".ui.main.view.MainActivity">
+        <activity android:name=".ui.onboarding.OnBoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.navigationfragments.NavActivity">
+        </activity>
+        <activity android:name=".ui.scroll.view.ScrollViewActivity" />
+        <activity android:name=".ui.seekbar.view.SeekBarActivity" />
+        <activity android:name=".ui.main.view.MainActivity" />
     </application>
 
 </manifest>
